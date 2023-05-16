@@ -1,16 +1,16 @@
 import {
-  Project as ProjectWrapper,
-  ProjectTitle,
-  ProjectStack,
-  ProjectStackTech,
   ProjectLink,
   ProjectLinks,
+  ProjectStack,
+  ProjectStackTech,
+  ProjectTitle,
+  Project as ProjectWrapper,
 } from "./style";
 
 import { Text } from "@/styles/Text";
+import { userData } from "@/utils/userData";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
 
 interface ReposType {
   id: number;
@@ -56,7 +56,7 @@ export const Project = (): JSX.Element => {
 
             <ProjectStack>
               <Text type="body2" color="grey2">
-                Primary Language:
+               Linguagem:
               </Text>
               {repository.language ? (
                 <ProjectStackTech>
@@ -77,15 +77,15 @@ export const Project = (): JSX.Element => {
               {repository.description?.substring(0, 129)}
             </Text>
             <ProjectLinks>
-              <ProjectLink target="_blank" href={repository.html_url}>
-                <FaGithub /> Github Code
+              <ProjectLink  href={repository.html_url}>
+                <FaGithub /> Ver código no GitHub.
               </ProjectLink>
               {repository.homepage && (
                 <ProjectLink
-                  target="_blank"
+                  
                   href={`https://${repository.homepage}`}
                 >
-                  <FaShare /> See demo
+                  <FaShare /> Ver código.
                 </ProjectLink>
               )}
             </ProjectLinks>

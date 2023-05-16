@@ -1,19 +1,19 @@
+import { userData } from "@/utils/userData";
 import { useState } from "react";
 import useMedia from "use-media";
-import { userData } from "@/utils/userData";
 
 import {
-  Navbar as NavbarWrapper,
   LogoTipo,
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
+  Navbar as NavbarWrapper,
 } from "./style";
 
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
+import { FaBars } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -64,10 +64,10 @@ export const NavLinks = (): JSX.Element => {
         Home
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
+        Projetos
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
+        Contato
       </Button>
       <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
         Social Media
