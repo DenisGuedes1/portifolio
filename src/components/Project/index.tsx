@@ -83,9 +83,9 @@ export const Project = (): JSX.Element => {
               {repository.homepage && (
                 <ProjectLink
                   
-                  href={`https://${repository.homepage}`}
+                  href={`${repository.homepage}`}
                 >
-                  <FaShare /> Ver código.
+                  <FaShare />Demonstração
                 </ProjectLink>
               )}
             </ProjectLinks>
